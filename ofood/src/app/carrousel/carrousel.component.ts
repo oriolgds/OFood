@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 
 export class CarrouselComponent implements OnInit {
 
-  images: any[] = [];
+  meals: any[] = [];
   private apiUrl = 'https://www.themealdb.com/api/json/v1/1/random.php'; // Replace with your API endpoint
 
   constructor() { }
@@ -20,16 +20,18 @@ export class CarrouselComponent implements OnInit {
   }
 
   async fetchImages(): Promise<any> {
-    try {
-      const response = await fetch(this.apiUrl);
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      const data = response.json();
-      return data;
-    } catch (error) {
-      console.error('Error fetching images:', error);
-    }      
-    console.log(this.images[0]);
+    for (let i = 0; i < 5; i++) {
+      try {
+        const response = await fetch(this.apiUrl);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const json = await response.json();
+        this.meals.push(json.meals[0]);
+      } catch (error) {
+        console.error('Error fetching images:', error);
+      }      
+    }       
+    console.log(this.meals);
   }
 }

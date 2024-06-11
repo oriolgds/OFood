@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
@@ -11,6 +11,21 @@ import {MatIconModule} from '@angular/material/icon';
   templateUrl: './search-bar.component.html',
   styleUrl: './search-bar.component.css'
 })
-export class SearchBarComponent {
+export class SearchBarComponent implements OnInit {
+  inputObject :HTMLElement | null
+  constructor(){
+    
+  }
+  
 
+  ngOnInit(): void {
+    @ViewChild('#search-input') searchInput;
+    console.log(this.inputObject?.classList);
+    throw new Error('Method not implemented.');
+    
+  }
+  Search():void {
+    
+  }
+  
 }

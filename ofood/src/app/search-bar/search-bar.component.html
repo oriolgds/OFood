@@ -1,9 +1,13 @@
-<form class="example-form container">
-    <mat-form-field class="example-full-width">
-      <mat-label>Search a receipe you want</mat-label>
-      <input id="search-input" matInput placeholder="Ex. Chocolate Cake">
-      
-    </mat-form-field>
-    <button mat-fab class="ms-2" (click)="Search()" color="primary"><mat-icon>search</mat-icon></button>
-</form>
-  
+<div id="form-container">
+  <form class="example-form container">
+      <mat-form-field class="example-full-width" style="display: flex;">
+        <mat-label>Search a receipe you want</mat-label>
+        <input id="search-input" matInput placeholder="Ex. Chocolate Cake">
+        
+      </mat-form-field>
+      <button (click)="Search(document.getElementById('search-input').value)" mat-icon-button>
+        <mat-icon>search</mat-icon>
+      </button>
+      <!-- <button mat-fab class="ms-2" (click)="Search()" color="primary"><mat-icon>search</mat-icon></button> -->
+  </form>
+</div>

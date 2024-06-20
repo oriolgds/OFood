@@ -10,5 +10,18 @@
 
 form {
   display: flex;
+  justify-content: center;
+}
+mat-form-field {
+  display: flex;
+}
+button {
+  position: relative;
+  transform: translateY(25%);
+}
+#form-container {
+  display: flex;
+  justify-content: center;
+  align-items: start;
 }
   

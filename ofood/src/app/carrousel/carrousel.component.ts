@@ -31,7 +31,6 @@ export class CarrouselComponent implements OnInit {
       } catch (error) {
         console.error('Error fetching images:', error);
       }      
-    }       
-    console.log(this.meals);
+    }
   }
 }

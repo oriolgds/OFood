@@ -16,9 +16,8 @@ export class SearchBarComponent implements OnInit {
     
   }
 
-  Search():void {
-    const searchInput = document.getElementById('searchInput')
-    console.log(searchInput?.value);
+  Search(value:String):void {
+    console.log(value);
   }
   
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, NgModule } from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
@@ -12,12 +12,14 @@ import {MatIconModule} from '@angular/material/icon';
   styleUrl: './search-bar.component.css'
 })
 export class SearchBarComponent implements OnInit {
+  input: string = "";
+
   ngOnInit(): void {
     
   }
 
-  Search(value:String):void {
-    console.log(value);
+  Search():void {
+    console.log(this.input)
   }
   
 }

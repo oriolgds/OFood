@@ -4,7 +4,7 @@
       <div class="carousel-indicators">
         <button *ngFor="let meal of meals; let i = index" data-bs-target="#sugested-food" [attr.data-bs-slide-to]="i" [attr.class]="i == 0 ? 'active': ''"></button>      
       </div>
-      <div class="carousel-inner">
+      <div class="carousel-inner rounded-2">
         <div class="carousel-item" [ngClass]="i == 0 ? 'active' : ''" *ngFor="let meal of meals; let i = index" data-bs-interval="2000">
           <a [href]="meal.strSource" target="_blank">
             <img [src]="meal.strMealThumb" class="d-block w-100" alt="...">

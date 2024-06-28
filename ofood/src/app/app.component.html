@@ -1,3 +1,10 @@
-<app-header></app-header>
-<app-search-bar></app-search-bar>
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="over">
+        <!-- Sidenav content goes here -->
+        <p>Sidenav content</p>
+    </mat-sidenav>
+
+    <app-header (toggleSidenavEvent)="toggleSidenav()"></app-header>
+    <app-search-bar></app-search-bar>
+    <router-outlet></router-outlet>
+</mat-sidenav-container>

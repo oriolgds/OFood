@@ -1,6 +1,6 @@
 <div class="container">
   <div class="display-6 mb-3">Suggested recepies 💡</div>
-  <div *ngIf="meals.length > 0;" id="sugested-food" class="carousel slide">
+  <div *ngIf="meals.length > 0;" id="sugested-food" class="carousel slide" data-bs-ride="true">
       <div class="carousel-indicators">
         <button *ngFor="let meal of meals; let i = index" data-bs-target="#sugested-food" [attr.data-bs-slide-to]="i" [attr.class]="i == 0 ? 'active': ''"></button>      
       </div>
